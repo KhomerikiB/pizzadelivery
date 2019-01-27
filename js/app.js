@@ -16,7 +16,7 @@ const modalFinalForm = document.querySelector(".checkout-modal-submit");
 let state = [];
 let finalOrder = [];
 const getData = async () => {
-  const response = await fetch("../data/data.json");
+  const response = await fetch("../pizzadelivery/data/data.json");
   if (response.status === 200) {
     const data = await response.json();
     return data;
