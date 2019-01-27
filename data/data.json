@@ -1,0 +1,87 @@
+[
+    
+    
+        {
+            "id":1,
+            "name":"Margherita",
+            "size":"15cm",
+            "ingredients":"Tomato sauce, mozzarella, and oregano",
+            "price":15,
+            "image":"image-1.jpg"
+             
+        },
+        {
+            "id":2,
+            "name":"Marinara",
+            "size":"17cm",
+            "ingredients":"Tomato sauce, garlic and basil",
+            "price":17,
+            "image":"image-2.jpg"
+        },
+        {
+            "id":3,
+            "name":"Quattro Stagioni",
+            "size":"18cm",
+            "ingredients":"Tomato sauce, mozzarella, mushrooms, ham, artichokes, olives, and oregano",
+            "price":18,
+            "image":"image-3.jpg"
+        },
+        {
+            "id":4,
+            "name":"Diavola",
+            "size":"24cm",
+            "ingredients":"Tomato sauce, mozzarella, spicy salami, and chilli pepper",
+            "price":24,
+            "image":"image-4.jpg"
+        },
+        {
+            "id":5,
+            "name":"Napoletana",
+            "size":"22cm",
+            "ingredients":"Tomato sauce, mozzarella, oregano, anchovies",
+            "price":23,
+            "image":"image-5.jpg"
+        },
+        {
+            "id":6,
+            "name":"Pugliese",
+            "size":"20cm",
+            "ingredients":"Tomato sauce, mozzarella, oregano, and onions",
+            "price":17,
+            "image":"image-6.jpg"
+        },
+        {
+            "id":7,
+            "name":"Frutti di Mare",
+            "size":"24cm",
+            "ingredients":" Tomato sauce and seafood",
+            "price":22,
+            "image":"image-7.jpg"
+        },
+        {
+            "id":8,
+            "name":"Quattro Formaggi",
+            "size":"24cm",
+            "ingredients":"Tomato sauce, mozzarella, parmesan, gorgonzola cheese, artichokes, and oregano",
+            "price":27,
+            "image":"image-8.jpg"
+        },
+        {
+            "id":9,
+            "name":"Emiliana",
+            "size":"25cm",
+            "ingredients":"Tomato sauce, mozzarella, eggplant, boiled potatoes, and sausage",
+            "price":25,
+            "image":"image-9.jpg"
+        },
+        {
+            "id":10,
+            "name":"Calzone",
+            "size":"32cm",
+            "ingredients":"Tomato sauce, mozzarella, ham, mushrooms, artichokes, anchovies, and oregano.",
+            "price":27,
+            "image":"image-10.jpg"
+        }
+
+    
+]

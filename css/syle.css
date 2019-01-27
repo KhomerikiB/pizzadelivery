@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+header .logo {
+    font-weight: bold;
+    font-size: 3rem;
+    margin-left: 2rem;
+    color: #222222;
+    text-decoration: none;
+}
+header .phone-number {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+header .times{
+    font-size: 1.2rem;
+    color: rgb(133, 133, 133);
+}
+#cart-btn {
+    position: relative;
+}
+
+#cart-btn {
+    background-color: rgb(190, 0, 32);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100px;
+    padding: 1rem 0;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+#cart-btn:hover {
+    background-color: rgb(160, 1, 28);
+}
+#cart-btn i {
+    font-size: 3rem;
+}
+.nav-detail {
+    display: flex;
+}
+.nav-detail div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right:3rem;
+}
+.nav-detail div::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -3rem;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 20px;
+    background-color: #afafaf;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+ 
+}
+.pizzas-container {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+}
+.container .item {
+    width: 450px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+    margin: 2rem;
+   
+}
+.container .image-box {
+    width: 100%;
+    
+}
+.image-box img {
+    width: 100%;
+}
+.pizza-detail {
+    flex: 1;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   
+   position: absolute;
+   background-color: rgb(102, 2, 19);
+   bottom: 0;
+   color: #fff;
+   min-height: 14rem;
+}
+.pizza-detail > *:not(:last-child) {
+    margin-bottom: 1rem;
+}
+.pizza-name,
+.pizza-size,
+.pizza-ingredients {
+    padding: 0 2rem;
+}
+.pizza-size {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+.pizza-ingredients {
+    font-size: 1.4rem;
+}
+.pizza-name {
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.pizza-price {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(190, 0, 32);
+    top: -25px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pizza-delivery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(190, 0, 32);
+    width: 100%;
+    flex: 1;
+    align-items: center;
+    padding: 0 2rem;
+    margin-bottom: 0 !important;
+}
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 0;
+}
+.decrement,
+.increment {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pizza-count {
+    margin: 0 1rem;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(102, 2, 19);
+}
+.right {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.right:disabled {
+    color: rgb(177, 177, 177);
+}
+.item-added {
+    position: fixed;
+    top: 10rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    border-radius: 4px;
+    background-color: #1c8045;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    display: none;
+}
+.display-block {
+    display: block !important;
+}
+.modal-detail-box {
+    position: fixed;
+    width: 70rem;
+    min-height: 40rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 2rem 5rem;
+    color: rgb(37, 37, 37);
+    overflow: hidden;
+    z-index: 10;
+    display: none;
+}
+.modal-name {
+    font-weight: bold;
+    font-size: 3rem;
+
+    transform: translateX(-3rem);
+    margin-bottom: 2rem;
+}
+.modal-order-title {
+
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.modal-order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+     transition: all 0.4s ease;
+ 
+}
+.modal-order-item:nth-child(odd) {
+    background-color: rgb(241, 241, 241);
+}
+.modal-order-item > div {
+    display: flex;
+}
+.modal-order-item:hover {
+    background-color: rgb(230, 230, 230);
+}
+.modal-order-pizza-name {
+    text-transform: capitalize;
+    display: block;
+    min-width: 12rem;
+}
+.modal-total-price {
+    margin: 3rem 0;
+}
+.modal-price {
+    font-weight: bold;
+}
+#modal-total-next {
+    padding: 1rem 4rem;
+    color: #fff;
+    background-color: rgb(190, 0, 32);
+    border: none;
+    cursor: pointer;
+    margin-bottom: 4rem;
+}
+.modal-total-remove {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(190, 0, 32);
+    padding: 0 2rem;
+    color: #fff;
+}
+.modal-remove-item {
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+#modal-delete-order {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.modal-total-close-btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.background-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(41, 41, 41,0.8);
+    z-index: 2;
+    display: none;
+}
+.checkout-modal {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50rem;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 2rem 5rem;
+    color: rgb(37, 37, 37);
+    display: none;
+}
+.checkout-modal-submit input {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #F5F7F6;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+}
+.checkout-modal-title{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    
+}
+.checkout-modal-submit #submit {
+   border-radius: 25px;
+   text-transform: uppercase;
+    width: auto;
+    padding: 1.5rem 4rem;
+    background-color: rgb(190, 0, 32);
+    color: #fff;
+}
+.error-modal {
+    position: fixed;
+    top: 10rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    border-radius: 4px;
+    background-color: rgb(190, 0, 32);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+   z-index: 50;
+   display: none;
+}
+@media only screen and (min-width: 300px) {
+    .phone-times::after {
+        visibility: hidden;
+    }
+    .item {
+        min-height: 30rem !important;
+    }
+    .modal-detail-box {
+        width: 80%;
+        height: 30rem !important;
+        padding: 1rem !important;
+    }
+    .modal-name {
+        transform: translateX(0);
+    }
+    .checkout-modal {
+        width: 80%;
+    }
+  }
+  @media only screen and (min-width: 900px) {
+    .phone-times::after {
+        visibility: visible;
+    }
+    .item {
+     min-height: 40rem;
+    }
+    .modal-detail-box {
+        width: 70rem !important;
+        min-height: 40rem !important;
+        padding: 2rem 5rem !important;
+    }
+    .modal-name {
+        transform: translateX(-3rem) !important;
+    }
+    .checkout-modal {
+     width: 50rem !important;
+    }
+  }

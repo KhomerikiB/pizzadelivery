@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css//syle.css">
+</head>
+<body>
+    <header>
+        <a href="/pizzadelivery" class="logo">PIZZA</a>
+        <div class="nav-detail">
+            <div class="phone-times">
+                <span class="phone-number">+995 595 777 777</span>
+                <span class="times">09:00 - 02:00</span>
+            </div>
+                    <button id="cart-btn"><i class="material-icons">shopping_cart</i></button>
+          
+        </div>
+    </header>
+   <div class="container">
+       <div class="pizzas-container">
+
+            <!-- <div class="item">
+                    <div class="image-box">
+                        <img src="./images/image-1.jpg" alt="">
+                    </div>
+                <div class="pizza-detail">
+                    <div class="pizza-size">17 cm</div>
+                    <div class="pizza-name">margarita</div>
+                    <div class="pizza-ingredients">lorem loremorem loremorem loremlorem loremorem loremorem loremlorem loremorem loremorem loremlorem loremorem loremorem lorem</div>
+                    <div class="pizza-delivery">
+                        <div class="left">
+                            <button class="decrement"><i class="large material-icons">chevron_left</i></button>
+        
+                            <span class="pizza-count">3</span>
+                            <button class="increment">  <i class="large material-icons">chevron_right</i>
+                            </button>
+                        </div>
+                        <button class="right">
+                                Add to cart
+                        </button>
+                    </div>
+                    <div class="pizza-price">15$</div>
+        
+                </div>
+                </div> -->
+            </div>   
+        <!-- FIXED ELEMENTS -->
+            <!-- ERROR MODAL -->
+            <!-- ITEM SUCCESSFULLY ADDED -->
+            <div class="error-modal"></div>
+            <div class="item-added">Item successfully added to your cart.</div>
+            <!-- MODAL BOX -->
+            <div class="modal-detail-box">
+                <div class="modal-name">PIZZA </div>
+                <div class="modal-order-title">Your Order:</div>
+                <div class="modal-items">
+                        <p>Your cart is empty</p>
+                </div>
+                <div class="modal-total-price"><span class="modal-price">Total Price: </span><span id="total-price">0</span>$</div>
+                <button id="modal-total-next">Next</button>
+                <div class="modal-total-remove"><button id="modal-delete-order">Delete Order</button><button class="modal-total-close-btn">Exit</button></div>
+            </div>
+            <!-- BACKGROUND MODAL -->
+            <div class="background-modal"></div>
+            <!-- CHECKOUT MODAL -->
+            <div class="checkout-modal">
+                <div class="checkout-modal-title">Checkout</div>
+                <form class="checkout-modal-submit">
+                    <input type="text" placeholder="Firstname" id="firstname" name="firstname">
+                    <input type="text" placeholder="Lastname" id="lastname" name="lastname">
+                    <input type="text" placeholder="Country" id="country" name="country">
+                    <input type="text" placeholder="Street" id="street" name="street">
+                    <input type="submit" value="Submit" id="submit">
+                </form>
+            </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
